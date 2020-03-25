@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+</head>
+<body>
+<h1 th:text="${titulo}"></h1>
+<ul>
+
+<h3> uris disponibles </h3>
+	 <p>/variables-en-ruta/${texto}</p>
+	 <p>/variables-en-ruta/${texto}/${numero}</p>
+	 <p>ejemplos</p>
+<li><a th:href="@{/variables-en-ruta/alumnos}">/variables-en-ruta/alumnos</a></li>
+<li><a th:href="@{/variables-en-ruta/} + 'productos'">/variables-en-ruta/productos</a></li>
+<li><a th:href="@{/variables-en-ruta/} + ${'productos'} + '/' + ${7}">/variables-en-ruta/productos/7</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"></link>
+</head>
+<meta charset="UTF-8">
+<title th:text=${titulo}>Insert title here</title>
+</head>
+<body>
+
+	<h1 th:text="${trabajo}" />
+	
+	<p>Nota: Las Interfaces pueden tomar el valor de clases que hayan heredado de la misma interface, de este modo se puede hacer el intercabio entre las implementaciones</p>
+	<br>
+	<p>@Autowired: Inyecta el componente. Puede ser en atributo,contructor ó setter</p>
+	<p>@Qualifier: Especifica el componente a utilizar (se usa desde la inyeccion)</p>
+	<p>@Primary: Deja por defecto el componente (se usa en el componente)</p>
+	<br>
+	<p>@PostConstruct: Accion ejecutada luego de construir los componentes inyectados</p>
+	<p>@PreDestroy: Accion ejecutada antes de eliminar los componentes inyectados</p>
+	<br>
+	<p>@Scope: Ambito de la aplicacion, spring por default trabaja con singleton</p>
+	
+	<br><h3>Los Scopes en spring son:</h3><br>
+	
+	<ul>
+		<li>Singleton</li>
+		<li>Prototype</li>
+		<li>Request</li>
+		<li>Session</li>
+		<li>Global session</li>
+		<li>Application</li>
+		<li>Websocket</li>
+	</ul>
+	
+</body>
+</html>
